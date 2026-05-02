@@ -1,0 +1,27 @@
+name: Ignition CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify Ignition Project
+        run: |
+          echo "Checking Ignition project structure..."
+
+          if [ -f "project.json" ]; then
+            echo "project.json found"
+          else
+            echo "project.json missing"
+            exit 1
+          fi
+
+          echo "Ignition project validation successful"
