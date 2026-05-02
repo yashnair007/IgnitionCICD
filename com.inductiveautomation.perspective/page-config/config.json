@@ -5,6 +5,9 @@
     },
     "/gittest": {
       "viewPath": "Gittest"
+    },
+    "/test3": {
+      "viewPath": "test3"
     }
   },
   "sharedDocks": {

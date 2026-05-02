@@ -62,12 +62,5 @@
       "persistent": false
     }
   },
-  "props": {
-    "address": "127.0.0.1",
-    "device": {},
-    "geolocation": {},
-    "locale": "en-IN",
-    "offline": {},
-    "timeZoneId": "Asia/Calcutta"
-  }
+  "props": {}
 }
