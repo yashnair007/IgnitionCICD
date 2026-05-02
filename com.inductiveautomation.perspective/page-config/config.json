@@ -2,6 +2,9 @@
   "pages": {
     "/": {
       "viewPath": "test"
+    },
+    "/gittest": {
+      "viewPath": "Gittest"
     }
   },
   "sharedDocks": {
