@@ -3,6 +3,9 @@
     "/": {
       "viewPath": "test"
     },
+    "/cdcheck": {
+      "viewPath": "CDcheck"
+    },
     "/gittest": {
       "viewPath": "Gittest"
     },

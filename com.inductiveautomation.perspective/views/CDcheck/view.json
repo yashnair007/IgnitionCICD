@@ -1,0 +1,29 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Progress"
+        },
+        "position": {
+          "height": 20,
+          "width": 200,
+          "x": 254,
+          "y": 340
+        },
+        "type": "ia.display.progress"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 70,
+      "y": 110
+    },
+    "type": "ia.container.coord"
+  }
+}
