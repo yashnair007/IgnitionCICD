@@ -15,6 +15,37 @@
           "y": 340
         },
         "type": "ia.display.progress"
+      },
+      {
+        "meta": {
+          "name": "Thermometer"
+        },
+        "position": {
+          "height": 273,
+          "width": 140,
+          "x": 514,
+          "y": 404
+        },
+        "props": {
+          "intervals": [
+            {
+              "color": "#47A9E5",
+              "high": 25,
+              "low": 0
+            },
+            {
+              "color": "#B394EF",
+              "high": 75,
+              "low": 25
+            },
+            {
+              "color": "#DB3939",
+              "high": 100,
+              "low": 75
+            }
+          ]
+        },
+        "type": "ia.display.thermometer"
       }
     ],
     "meta": {
