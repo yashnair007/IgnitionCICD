@@ -1,4 +1,4 @@
-name: Ignition CI
+name: Ignition CI-CD
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  validate-project:
+  validate-and-package:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,3 +25,15 @@ jobs:
           fi
 
           echo "Ignition project validation successful"
+
+      - name: Create Deployment Package
+        run: |
+          mkdir deployment
+          cp -r * deployment/ || true
+          tar -czf ignition-project.tar.gz deployment
+
+      - name: Upload Deployment Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ignition-build
+          path: ignition-project.tar.gz
