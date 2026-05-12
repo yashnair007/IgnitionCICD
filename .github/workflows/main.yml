@@ -1,39 +1,63 @@
-name: Ignition CI-CD
 
-on:
-  push:
-    branches:
-      - main
+name: Ignition CI 
 
-jobs:
-  validate-and-package:
-    runs-on: self-hosted
+ 
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+ 
 
-      - name: Verify Ignition Project
-        run: |
-          echo "Checking Ignition project structure..."
+on: 
 
-          if [ -f "project.json" ]; then
-            echo "project.json found"
-          else
-            echo "project.json missing"
-            exit 1
-          fi
+  push: 
 
-          echo "Ignition project validation successful"
+    branches: 
 
-      - name: Create Deployment Package
-        run: |
-          mkdir deployment
-          cp -r * deployment/ || true
-          zip -r ignition-project.zip deployment
+      - main 
 
-      - name: Upload Deployment Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ignition-build
-          path: ignition-project.zip
+ 
+
+ 
+
+jobs: 
+
+  validate-project: 
+
+    runs-on: ubuntu-latest 
+
+ 
+
+ 
+
+    steps: 
+
+      - name: Checkout Repository 
+
+        uses: actions/checkout@v4 
+
+ 
+
+ 
+
+      - name: Verify Ignition Project 
+
+        run: | 
+
+          echo "Checking Ignition project structure..." 
+
+ 
+
+          if [ -f "project.json" ]; then 
+
+            echo "project.json found" 
+
+          else 
+
+            echo "project.json missing" 
+
+            exit 1 
+
+          fi 
+
+ 
+
+          echo "Ignition project validation successful" 
+
