@@ -6,6 +6,9 @@
     "/cdcheck": {
       "viewPath": "CDcheck"
     },
+    "/checker": {
+      "viewPath": "checker"
+    },
     "/gittest": {
       "viewPath": "Gittest"
     },
